@@ -19,11 +19,18 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        loader: 'css-loader!stylus-loader?paths=node_modules/bootstrap-stylus/stylus/'
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'stylus-loader' }
+        ]
       },
       {
         test: /\.css$/,
-        loader: 'css-loader'
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' }
+        ]
       }
     ]
   }

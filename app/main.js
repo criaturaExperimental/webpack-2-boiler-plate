@@ -1,6 +1,6 @@
 import _ from 'lodash';
+require('./styles/base.styl')
 
-(() => console.log('here you are'))()
 
 function component () {
   var element = document.createElement('div');
